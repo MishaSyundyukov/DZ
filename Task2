@@ -1,0 +1,14 @@
+public class Main1 {
+    public static void main(String[] args){
+        final String str = "java interview";
+        System.out.println(reverse(str, s -> {
+            StringBuilder builder = new StringBuilder(str);
+            return builder.reverse().toString();
+        }));
+
+    }
+
+    public static String reverse(String s, Reverse reverse) {
+        return reverse.reverse(s);
+    }
+}
