@@ -1,0 +1,17 @@
+mport java.util.List;
+import java.util.function.Function;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> l = List.of(1,2,3);
+        search(l, 4, (list)-> list.indexOf(4));
+
+    }
+
+    public static Integer search(List<Integer> list, Integer number, Function<List<Integer>, Integer> function){
+       return function.apply(list);
+
+    }
+
+
+}
